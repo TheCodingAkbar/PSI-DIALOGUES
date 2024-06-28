@@ -43,5 +43,5 @@ const EarningsInfo = () => {
         </div>
     );
 };
-
+//Ubah
 export default EarningsInfo;
