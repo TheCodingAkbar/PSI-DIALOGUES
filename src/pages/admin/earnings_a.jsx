@@ -1,10 +1,8 @@
 import React from 'react';
-import UserInfo from '../../components/Admin/useradmin/userinfo';
-import MentorInfo from '../../components/Admin/mentoradmin/mentorinfo';
-import { allEarningsData } from '../../data/allearnings';
 import EarningsInfo from '../../components/Admin/earningsadmin/earningsinfo';
+import MonthlyIncomeChart from '../../components/Admin/earningsadmin/MonthlyIncomeChart';
 
-const Home = () => {
+const EarningsA = () => {
     const handleLogout = () => {
         console.log('Logout clicked');
     };
@@ -23,6 +21,7 @@ const Home = () => {
                     <main className="flex flex-col mt-10 mr-1">
                         <div className='flex justify-between gap-8'>
                             <EarningsInfo />
+                            <MonthlyIncomeChart />
                         </div>
                     </main>
                 </div>
@@ -31,4 +30,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default EarningsA;
