@@ -93,4 +93,4 @@ export const purchasedata = [
     }
 ];
 
-console.log(purchasedata); //Data
+console.log(purchasedata);//Ubah

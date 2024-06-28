@@ -22,7 +22,7 @@ const EarningsInfo = () => {
                 setTotalEarnings(earningsThisMonth);
             }
         };
-
+//Rubah sedikit
         fetchData();
     }, []);
 
