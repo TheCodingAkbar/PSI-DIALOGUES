@@ -1,6 +1,6 @@
 // src/components/earningsinfo.jsx
 import React, { useState, useEffect } from 'react';
-import { allEarningsData } from '../../../data/allearnings';
+import { purchasedata } from '../../../data/purchasedata';
 
 const EarningsInfo = () => {
     const [totalEarnings, setTotalEarnings] = useState(0);
@@ -11,16 +11,14 @@ const EarningsInfo = () => {
                 const response = await fetch('YOUR_API_ENDPOINT_HERE');
                 if (response.ok) {
                     const data = await response.json();
-                    const earningsThisMonth = data.reduce((acc, earning) => acc + earning.amount, 0);
+                    const earningsThisMonth = data.reduce((acc, earning) => acc + earning.price, 0);
                     setTotalEarnings(earningsThisMonth);
                 } else {
-                    // Jika API tidak tersedia, gunakan data dummy
-                    const earningsThisMonth = allEarningsData.reduce((acc, earning) => acc + earning.amount, 0);
+                    const earningsThisMonth = purchasedata.reduce((acc, purchase) => acc + purchase.price, 0);
                     setTotalEarnings(earningsThisMonth);
                 }
             } catch (error) {
-                // Jika terjadi error, gunakan data dummy
-                const earningsThisMonth = allEarningsData.reduce((acc, earning) => acc + earning.amount, 0);
+                const earningsThisMonth = purchasedata.reduce((acc, purchase) => acc + purchase.price, 0);
                 setTotalEarnings(earningsThisMonth);
             }
         };
