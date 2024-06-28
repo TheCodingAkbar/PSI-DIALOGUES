@@ -1,6 +1,6 @@
 // src/components/earningsinfo.jsx
 import React, { useState, useEffect } from 'react';
-import { purchasedata } from '../../../data/purchasedata';
+import { purchasedata } from '../../../data/purchasedata';//Ngambil dari data
 
 const EarningsInfo = () => {
     const [totalEarnings, setTotalEarnings] = useState(0);
