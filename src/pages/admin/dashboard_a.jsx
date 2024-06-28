@@ -2,7 +2,10 @@ import React from 'react';
 import UserInfo from '../../components/Admin/useradmin/userinfo';
 import MentorInfo from '../../components/Admin/mentoradmin/mentorinfo';
 import { allEarningsData } from '../../data/allearnings';
-import EarningsInfo from '../../components/Admin/earningsadmin/earningsinfo';
+import EarningsInfo from '../../components/Admin/earningsadmin/Earningsinfo';
+import UserStatistics from '../../components/Admin/useradmin/UserStatistics';
+import MonthlyIncomeChart from '../../components/Admin/earningsadmin/MonthlyIncomeChart';
+import SubscriptionTypeChart from '../../components/Admin/earningsadmin/SubscriptionTypeChart';
 
 const Home = () => {
     const handleLogout = () => {
@@ -21,10 +24,17 @@ const Home = () => {
                         <h1 className="text-4xl font-bold text-black">Dashboard</h1>
                     </header>
                     <main className="flex flex-col mt-10 mr-1">
-                        <div className='flex justify-between gap-8'>
+                        <div className='flex justify-between gap-8 mb-8'>
                             <UserInfo />
                             <MentorInfo />
                             <EarningsInfo />
+                        </div>
+                        <div className='mb-8 w-1000'>
+                            <UserStatistics />
+                        </div>
+                        <div className='flex justify-between gap-8'>
+                            <MonthlyIncomeChart />
+                            <SubscriptionTypeChart />
                         </div>
                     </main>
                 </div>

@@ -1,3 +1,5 @@
+// src/components/Admin/earningsadmin/MonthlyIncomeChart.jsx
+// src/components/Admin/earningsadmin/MonthlyIncomeChart.jsx
 import React, { useEffect, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
@@ -57,13 +59,30 @@ const MonthlyIncomeChart = () => {
     const options = {
         responsive: true,
         plugins: {
-            legend: { display: true, position: 'top' },
-            title: { display: true, text: 'Monthly Income' },
+            legend: { 
+                display: true, 
+                position: 'top' 
+            },
+            title: { 
+                display: true, 
+                text: 'Monthly Income',
+                font: {
+                    size: 20,
+                    weight: 'bold',
+                }
+            },
         },
     };
 
-    return <Bar data={data} options={options} />;
+    return (
+        <div className='border border-gray-400 rounded-md p-4'style={{ width: '1100px', height: '700px' }}>
+            <Bar data={data} options={options} />
+        </div>
+    );
 };
 
 export default MonthlyIncomeChart;
+
+
+
 
